@@ -1,0 +1,156 @@
+/* Navigation Bar Styles */
+.navbar {
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #060644 !important;
+}
+
+.navbar.scrolled .nav-link {
+    color: white !important;
+}
+
+.navbar.scrolled .navbar-brand img {
+    content: url('images/logo2.png');
+}
+
+.nav-link {
+    color: black !important;
+    transition: color 0.3s ease;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero img {
+    width: 80%;
+    height: auto;
+}
+
+/* About Section Styles */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 50px;
+    color: black;
+}
+
+.about .content {
+    flex: 1;
+    max-width: 45%;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about h2 {
+    font-size: 3.5em;
+}
+
+.about .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 8px;
+    max-width: 45%;
+}
+
+.about .image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Second About Section - Image Grid on the Left */
+.about.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.col-md-12 h2{
+    text-align: center;
+}
+
+.col-md-12 p{
+    text-align: center;
+}
+
+footer{
+    background-color: #060644;
+}
+
+/* Projects Section Styles */
+.projects {
+    padding: 50px 0;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay-text {
+    opacity: 1;
+}
+
+.headerrr{
+    font-size: 3.5em;
+}
+
+.contacthead{
+    font-size: 3.5em;
+}
