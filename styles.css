@@ -41,7 +41,6 @@
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    padding: 50px;
     color: black;
 }
 
@@ -94,9 +93,7 @@ footer{
 }
 
 /* Projects Section Styles */
-.projects {
-    padding: 50px 0;
-}
+.projects {}
 
 .project-cards {
     display: grid;
@@ -127,6 +124,16 @@ footer{
     transition: opacity 0.3s ease;
 }
 
+.achievements-certifications {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.achievements, .certifications {
+    flex: 1;
+}
+
 .project-card:hover::before {
     opacity: 1;
 }
@@ -154,3 +161,62 @@ footer{
 .contacthead{
     font-size: 3.5em;
 }
+
+/* Full-Width Footer Solution */
+.footer-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #060644;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+  }
+
+  .mb-0 p{
+    text-align: center;
+  }
+  
+  footer {
+    max-width: 1200px; /* Or your preferred max content width */
+    margin: 0 auto;
+    padding: 2rem 15px; /* Adds breathing room on mobile */
+  }
+  
+  /* Ensures no horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Testimonials Section Styling */
+#testimonials .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #testimonials .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  #testimonials .card-title {
+    color: #060644;
+    font-weight: 600;
+  }
+  
+  #testimonials .fst-italic {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  #testimonials .btn-outline-primary {
+    border-color: #060644;
+    color: #060644;
+  }
+  
+  #testimonials .btn-outline-primary:hover {
+    background-color: #060644;
+    color: white;
+  }
